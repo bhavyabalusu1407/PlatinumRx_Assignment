@@ -4,7 +4,7 @@
 
 I used Excel to perform data preparation, transformation, and analysis on the ticket dataset.
 
-* Created two sheets: **ticket** and **feedbacks**, and used **VLOOKUP** to populate `ticket_created_at` in the feedbacks sheet using `cms_id` as the key.
+* Created two sheets: **ticket** and **feedbacks**, and used **XLOOKUP** to populate `ticket_created_at` in the feedbacks sheet using `cms_id` as the key.
 * Built helper columns:
 
   * **Same Day** → compared only dates using `INT(created_at)` and `INT(closed_at)`
