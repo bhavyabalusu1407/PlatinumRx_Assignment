@@ -1,42 +1,58 @@
-## PlatinumRx Assignmet
+## PlatinumRx Assignment
 
-###  Excel
+### Excel (Spreadsheet Analysis)
 
-I used Excel to clean and analyze the ticket data.
+I used Excel to perform data preparation, transformation, and analysis on the ticket dataset.
 
-* Used **XLOOKUP** to map `ticket_created_at` from the ticket sheet to the feedback sheet.
-* Created helper columns to identify:
+* Created two sheets: **ticket** and **feedbacks**, and used **VLOOKUP** to populate `ticket_created_at` in the feedbacks sheet using `cms_id` as the key.
+* Built helper columns:
 
-  * **Same Day** using date comparison
-  * **Same Hour** using date and hour comparison
-* Used **Pivot Tables** to calculate outlet-wise counts for tickets created and closed on the same day and same hour.
-* Handled missing values by removing `(blank)` entries and filling necessary data.
+  * **Same Day** → compared only dates using `INT(created_at)` and `INT(closed_at)`
+  * **Same Hour** → compared both date and hour using `HOUR()` function
+* Used **Pivot Tables** to calculate outlet-wise counts of tickets created and closed on the same day and same hour.
+* Performed data cleaning by handling missing values and removing `(blank)` entries.
 
  **Spreadsheet Link:**
 https://1drv.ms/x/c/5D79C41B0B788193/IQBrsDFIUEoYTpSPskGCXYFTAfQ27Wq5KJEzW7wVqdLf6iM?e=MDAdo0
 
 ---
 
-###  SQL
+###  SQL (Database Analysis)
 
-I used SQL to perform data analysis on clinic data.
+I implemented SQL queries for both Hotel and Clinic management systems.
 
-* Applied **GROUP BY** and **SUM()** to calculate revenue and expenses.
-* Used **JOINs** to combine multiple tables.
-* Used **ORDER BY** and **LIMIT** to find top customers.
-* Applied **window functions (DENSE_RANK)** to identify most and second least profitable clinics.
+* Created database schemas using **CREATE TABLE** and inserted sample data using **INSERT statements**.
+* Solved analytical queries using:
+
+  * **JOINs** to combine multiple tables
+  * **GROUP BY** and **SUM()** for aggregations
+  * **HAVING** clause for filtering aggregated results
+* Used **window functions (DENSE_RANK / ROW_NUMBER)** for advanced queries such as:
+
+  * Finding most/least ordered items
+  * Identifying second highest or second least values
+* Performed time-based analysis using **YEAR()** and **MONTH()** functions.
 
 ---
 
-###  Python
+###  Python (Programming Logic)
 
-I solved basic logic problems using Python.
+I solved basic programming problems using Python.
 
-* Converted minutes into a human-readable format using division and modulus operations.
-* Removed duplicate characters from a string using a loop while maintaining order.
+* Converted minutes into a human-readable format using:
+
+  * Integer division (`//`) for hours
+  * Modulus (`%`) for remaining minutes
+* Removed duplicate characters from a string using a loop-based approach while maintaining the original order of characters.
 
 ---
 
 ###  Summary
 
-Overall, I used Excel for data manipulation, SQL for querying structured data, and Python for implementing logical operations. The approach focused on clarity, correctness, and simplicity.
+This assignment demonstrates the ability to work across multiple tools:
+
+* **Excel** for data manipulation and visualization
+* **SQL** for structured data querying and analysis
+* **Python** for logical problem-solving
+
+The overall approach focuses on correctness, clarity, and efficient use of fundamental concepts.
